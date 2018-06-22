@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Compare snapshots 1`] = `
+.c0 {
+  width: 200px;
+  margin: 0 auto;
+}
+
+<div
+  className="c0"
+>
+  You did it!
+</div>
+`;
