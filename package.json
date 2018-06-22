@@ -4,7 +4,10 @@
   "description": "A test case for getting Jest to work with Babel 7",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build:dev",
+    "build:dev": "BABEL_ENV=dev webpack-dev-server --hot --config config/webpack.dev.js --mode development",
+    "build:prod": "BABEL_ENV=prod webpack --config config/webpack.prod.js --mode production",
+    "dist": "npm run build:prod"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,23 @@
   "bugs": {
     "url": "https://github.com/daviddelusenet/jest-babel-7/issues"
   },
-  "homepage": "https://github.com/daviddelusenet/jest-babel-7#readme"
+  "homepage": "https://github.com/daviddelusenet/jest-babel-7#readme",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^7.1.4",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.3"
+  }
 }
